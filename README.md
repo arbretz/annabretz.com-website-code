@@ -1,13 +1,23 @@
 # annabretz.com
 
-Anna Bretz's resume site: a single-page static site — plain HTML and CSS, no build step. Hosted on Cloudflare Pages.
+Anna Bretz's personal site: a static site — plain HTML and CSS, no build step. Hosted on Cloudflare Pages.
 
 ## Files
 
 | File | Purpose |
 |------|---------|
-| `index.html` | All resume content. |
+| `index.html` | Home (landing) page. |
+| `resume.html` | Résumé. |
+| `contact.html` | Contact form (delivered by email via FormSubmit). |
+| `thanks.html` | Shown after the contact form is sent. |
 | `styles.css` | Styling (desert palette). Colors are defined at the top. |
+
+## Contact form
+
+The form on `contact.html` posts to [FormSubmit](https://formsubmit.co), which emails each
+submission to annarbretz@gmail.com. No account is needed. The **first** submission sends a
+one-time activation email to that inbox; click the link in it, and every submission after
+that arrives normally. A hidden "honeypot" field filters most spam bots.
 
 ## Preview locally
 

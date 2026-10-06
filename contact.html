@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Contact — Anna Bretz</title>
+  <meta name="description" content="Get in touch with Anna Bretz about employment, collaboration, or speaking opportunities.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contact — Anna Bretz">
+  <meta property="og:description" content="Get in touch with Anna Bretz about employment, collaboration, or speaking opportunities.">
+  <meta property="og:url" content="https://annabretz.com/contact">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%239a4a28'/><text x='50' y='66' font-size='50' text-anchor='middle' fill='white' font-family='Arial,sans-serif' font-weight='bold'>AB</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-nav">
+    <a class="brand" href="index.html">Anna Bretz</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="resume.html">Résumé</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="intro intro-compact">
+      <h1>Get in touch</h1>
+      <p class="lede">
+        Interested in working together, discussing an opportunity, or connecting about
+        Federal Indian and Tribal Law? Send a note below and I will respond by email.
+      </p>
+    </section>
+
+    <!-- Submissions are delivered to Anna's inbox by FormSubmit (formsubmit.co).
+         The very first submission triggers a one-time activation email to that inbox. -->
+    <form class="contact-form" action="https://formsubmit.co/annarbretz@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New contact from annabretz.com">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://annabretz.com/thanks.html">
+      <!-- Spam trap: hidden from people, filled in by bots -->
+      <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="field-row">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="organization">Organization <span class="optional">(optional)</span></label>
+          <input id="organization" name="organization" type="text" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="reason">Reason for reaching out</label>
+          <select id="reason" name="reason" required>
+            <option value="" disabled selected>Select one</option>
+            <option>Employment opportunity</option>
+            <option>Collaboration or project</option>
+            <option>Speaking or event</option>
+            <option>Networking</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+      </div>
+
+      <button class="button" type="submit">Send message</button>
+    </form>
+
+    <section class="alt-contact">
+      <h2>Other ways to connect</h2>
+      <p>
+        Email <a href="mailto:annarbretz@gmail.com">annarbretz@gmail.com</a>
+        or connect on <a href="https://www.linkedin.com/in/annabretz" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Anna Bretz</p>
+    </footer>
+  </main>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
