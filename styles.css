@@ -9,7 +9,17 @@
   --muted: #5d6266;
   --rule: #d9d6cf;
   --teal: #0e5e5c;      /* desert teal: links, buttons */
-  --sun: #e8b8a4;       /* desert rose: illustration only */
+  /* painted scene (illustration only) */
+  --sky-top: #f2dccd;
+  --sky-bottom: #e4ebe4;
+  --sun: #e59f86;
+  --glow: #f0c3ad;
+  --far: #a8c5bf;
+  --far-light: #c9ddd7;
+  --near: #5b938d;
+  --near-light: #7fb0a9;
+  --floor: #0e5e5c;
+  --palm: #2b2724;
   --field: #ffffff;
   --on-teal: #ffffff;
 }
@@ -21,7 +31,16 @@
     --muted: #a5a9ab;
     --rule: #2e3436;
     --teal: #6cc4bc;
-    --sun: #b9806e;
+    --sky-top: #232c3a;
+    --sky-bottom: #4a3d47;
+    --sun: #d58c72;
+    --glow: #6a4a4c;
+    --far: #34504f;
+    --far-light: #46666380;
+    --near: #3c716c;
+    --near-light: #4f8a84;
+    --floor: #1f5552;
+    --palm: #101415;
     --field: #1b2022;
     --on-teal: #0d1213;
   }
@@ -220,14 +239,24 @@ footer p { margin: 0; }
 .intro .status { margin-top: 18px; }
 .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
 
-/* Hand-drawn desert scene: sun, San Jacinto ridgeline, palm */
-.motif { width: 280px; }
+/* Painted desert scene: sun, San Jacinto ridgeline, palm */
+.motif {
+  width: 280px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 10px 30px rgba(30, 40, 40, 0.12);
+}
 .motif svg { display: block; width: 100%; height: auto; }
+.motif .sky { fill: url(#sky); }
+.motif .glow { fill: var(--glow); opacity: 0.7; }
 .motif .sun { fill: var(--sun); }
-.motif .far { fill: var(--teal); opacity: 0.28; }
-.motif .near { fill: var(--teal); opacity: 0.6; }
-.motif .floor { fill: var(--teal); }
-.motif .palm { fill: none; stroke: var(--ink); stroke-linecap: round; stroke-linejoin: round; }
+.motif .far { fill: var(--far); }
+.motif .near { fill: var(--near); }
+.motif .floor { fill: var(--floor); }
+.motif .far-light, .motif .near-light { fill: none; stroke-width: 3; stroke-linecap: round; opacity: 0.8; }
+.motif .far-light { stroke: var(--far-light); }
+.motif .near-light { stroke: var(--near-light); }
+.motif .palm { fill: none; stroke: var(--palm); stroke-linecap: round; stroke-linejoin: round; }
 
 .areas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; counter-reset: area; }
 .area { padding-top: 14px; border-top: 1px solid var(--ink); counter-increment: area; }
